@@ -42,12 +42,16 @@ keyCombination('keydown', {
 ```
 
 ## API
+
+The order of modifier keys must be `alt`, `ctrl`, `shift`, then the main key. For instance: `ctrl_shift_p` is correct. **Invalid**: `shift_ctrl_p` or `control_shift_p`
+
+
 | Task                    |   |
 |-------------------------|---|
 | Initialization          |   `keyCombination(element: Object, eventName: String, rulesObject: Object)` |
-| Add rule dynamically    | `.destroy()`  |
-| Remove rule dynamically |  `.addRule({ruleName: () => callbackFunction})`  |
-| Remove all listeners    | `.removeRule(RuleName)`  |
+| Add rule dynamically |  `.addRule({ruleName: () => callbackFunction})`  |
+|   Remove rule dynamically    | `.removeRule(RuleName)`  |
+| Remove all listeners  | `.destroy()`  |
 
 #### `new KeyboardListener(element: Object, eventName: String, rulesObject: Object)`
 #### `.destroy()`
