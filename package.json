@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/onurkerimov/KeyboardListener.js.git"
+    "url": "git+https://github.com/onurkerimov/key-combination.git"
   },
   "keywords": [
     "key",
@@ -19,7 +19,7 @@
   "author": "Onur Kerimov",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/onurkerimov/KeyboardListener.js/issues"
+    "url": "https://github.com/onurkerimov/key-combination/issues"
   },
-  "homepage": "https://github.com/onurkerimov/KeyboardListener.js#readme"
+  "homepage": "https://github.com/onurkerimov/key-combination#readme"
 }
