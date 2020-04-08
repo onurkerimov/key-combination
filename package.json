@@ -1,0 +1,25 @@
+{
+  "name": "key-combination",
+  "version": "0.0.1",
+  "description": "Easily define keyboard listener for key combinations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/onurkerimov/KeyboardListener.js.git"
+  },
+  "keywords": [
+    "key",
+    "keydown",
+    "keyboard",
+    "combination"
+  ],
+  "author": "Onur Kerimov",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/onurkerimov/KeyboardListener.js/issues"
+  },
+  "homepage": "https://github.com/onurkerimov/KeyboardListener.js#readme"
+}

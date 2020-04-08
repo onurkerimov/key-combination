@@ -1,7 +1,7 @@
-# KeyboardListener.js
-KeyboardListener.js is a plugin that lets you easily define `keydown`, `keypress`, `keyup` listeners. With KeyboardListener.js, you can:
+# key-combination
+key-combination is a plugin that lets you easily define `keydown`, `keypress`, `keyup` listeners for keys and key combinations. You can:
 ```js
-let listener = new KeyboardListener(window, 'keydown', {
+let listener = keyCombination('keydown', {
   ctrl_space(e) {
     // Listens to Ctrl+Space keystrokes
   }
@@ -9,6 +9,7 @@ let listener = new KeyboardListener(window, 'keydown', {
 // Then, remove the listener
 listener.destroy()
 ```
+
 While in vanilla JS, the same task is way confusing:
 ```js
 let ctrlSpaceListener = (e) => {
@@ -24,9 +25,10 @@ window.addEventListener('keydown', ctrlSpaceListener)
 // Then, remove the listener
 window.removeEventListener('keydown', ctrlSpaceListener) 
 ```
+
 You can declare as many keystroke listeners as you want 
 ```js
-new KeyboardListener(window, 'keydown', {
+keyCombination('keydown', {
   tab(e) {
     e.preventDefault()
     console.log('tab key is pressed')
@@ -38,12 +40,11 @@ new KeyboardListener(window, 'keydown', {
   }
 })
 ```
-## Notes
-- Listener names in the rules object
+
 ## API
 | Task                    |   |
 |-------------------------|---|
-| Initialization          |   `new KeyboardListener(element: Object, eventName: String, rulesObject: Object)` |
+| Initialization          |   `keyCombination(element: Object, eventName: String, rulesObject: Object)` |
 | Add rule dynamically    | `.destroy()`  |
 | Remove rule dynamically |  `.addRule({ruleName: () => callbackFunction})`  |
 | Remove all listeners    | `.removeRule(RuleName)`  |
