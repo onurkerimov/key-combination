@@ -53,7 +53,3 @@ The order of modifier keys must be `alt`, `ctrl`, `shift`, then the main key. Fo
 |   Remove rule dynamically    | `.removeRule(RuleName)`  |
 | Remove all listeners  | `.destroy()`  |
 
-#### `new KeyboardListener(element: Object, eventName: String, rulesObject: Object)`
-#### `.destroy()`
-#### `.addRule({ruleName: () => callbackFunction})`
-#### `.removeRule(RuleName)`
