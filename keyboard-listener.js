@@ -1,6 +1,5 @@
-let KeyboardListener = class KeyboardListener {
-  constructor(element, eventName, directives) {
-    this.element = element
+export class KeyCombination {
+  constructor(eventName, directives) {
     this.eventName = eventName
     this.directives = directives
     if (!directives.unknown) directives.unknown = () => {}
@@ -23,10 +22,10 @@ let KeyboardListener = class KeyboardListener {
       if (directives[keyCombination]) this.directives[keyCombination](e)
       else this.directives.unknown(e)
     }
-    this.element.addEventListener(this.eventName, this._callback)
+    window.addEventListener(this.eventName, this._callback)
   }
   destroy() {
-    this.element.removeEventListener(this.eventName, this._callback)
+    window.removeEventListener(this.eventName, this._callback)
   }
   addRule(name, fn) {
     this.directives[name] = fn
@@ -36,4 +35,4 @@ let KeyboardListener = class KeyboardListener {
   }
 }
 
-export default KeyboardListener
+export default (eventName, directives) => new KeyCombination(eventName, directives)
